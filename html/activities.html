@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ClockInit - Categories</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body class="activities" >
+
+    <!-- navbar -->
+    <div style="min-height: 87vh;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand"><img src="../img/logo.svg" alt="Logo"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsiva">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsiva">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item" id="activities-navlink"><a href="./categories.html" class="nav-link active">Activities</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+                    <li class="nav-item" id="store-btn"><a href="./store.html" class="nav-link">Store</a></li>
+                    <li class="nav-item" id="nav-name-of-user"><a href="./profile.html" class="nav-link" id="name-of-user"></a></li>
+                    <li class="nav-item" id="logout-btn"><a href="" class="nav-link" id="logout-trigger">Log out</a></li>
+                    <li class="nav-item" id="signinButton"><a href="#loginModal" class="nav-link" data-toggle="modal" data-target="#loginModal">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="back">
+        
+        <div class="text-center" id="activitiesHeader" style="color: white;">Activities</div>
+        <div class="container background-activities">
+            <div class="row" id="activities-row">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <a href="../index.html" id="send-user-to-index" style="visibility: hidden;"></a>
+
+
+    
+    <div class="loader-wrapper" style="display: none;">
+        <div class="loader2">
+
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-6"></div>
+        <div class="col">
+            <form class="form-inline">
+                <div class="form-group">
+                    
+                </div>
+                <div class="form-group m-2">
+                    <label for="txtActivity" style="color: black;">Activity name:</label>
+                    <input id="txtActivity" type="text" class="form-control m-2" />
+                </div>
+                <button id="btnFilter" type="button" class="btn btn-primary">FILTER</button>
+               
+               
+            </form>
+        </div>
+    </div>
+
+
+ 
+
+
+    <!-- Success Modal -->
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="modal-box">
+                    <!-- Modal -->
+                    <div class="modal fade" id="SuccessModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content clearfix">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <div class="modal-body">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <h3 class="title">Success!</h3>
+                                    <p class="description" id="success-content"> You are now registered to our website! </p>
+                                    <a href=""><button type="button" class="btn">Done</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Error Modal -->
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="modal-box">
+                    <!-- Modal -->
+                    <div class="modal fade" id="ErrorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content clearfix" id="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <div class="modal-body">
+                                    <div class="icon" id="icon">
+                                        <i class="fas fa-times-circle"></i>
+                                    </div>
+                                    <h3 class="title">Error!</h3>
+                                    <p class="description" id="error-content"> Register failed!  </p>
+                                    <a data-dismiss="modal"><button type="button" id="modalBtn" data class="btn">Try again</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+   <!-- Footer -->
+
+
+   <footer class="page-footer fixarRodape" >
+        
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script>
+        window.addEventListener ("load", function() {
+            var loader = document.querySelector(".loader-wrapper");
+            loader.style.display = 'inline';
+            setTimeout(function(){ loader.style.display = 'none' },500)
+        });
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <script type="module" src="/js/app.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        
+    <script src="https://kit.fontawesome.com/ab51c64d63.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
